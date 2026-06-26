@@ -1,0 +1,1 @@
+export { PlateDetail } from './PlateDetail';
