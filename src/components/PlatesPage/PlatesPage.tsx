@@ -215,8 +215,8 @@ export const PlatesPage = () => {
         plate.slug,
         plate.owner,
         plate.description,
-        plate.tags.join(' '),
-        plate.badges.join(' '),
+        plate.tags?.join(' '),
+        plate.badges?.join(' '),
       ]
         .filter(Boolean)
         .join(' ')
@@ -235,7 +235,7 @@ export const PlatesPage = () => {
 
   return (
     <>
-      <Header title="Plates" />
+      <Header title="      cd /Users/moeidheidari/projects/backstage/kikplate/plugins/kikplatePlates" />
       <Container>
         <div
           style={{

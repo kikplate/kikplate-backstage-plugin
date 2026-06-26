@@ -54,11 +54,11 @@ export const PlateInfoTab = ({ plate, metadata }: InfoTabProps) => {
         </div>
       )}
 
-      {plate.tags.length > 0 && (
+      {(plate.tags?.length ?? 0) > 0 && (
         <div style={{ marginBottom: '24px' }}>
           <h3 style={{ margin: '0 0 8px 0', fontSize: '14px', color: theme.palette.text.secondary }}>Tags</h3>
           <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
-            {plate.tags.map(tag => (
+            {plate.tags?.map(tag => (
               <span
                 key={tag}
                 style={{

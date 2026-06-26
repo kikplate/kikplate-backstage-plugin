@@ -1,0 +1,1 @@
+{"version":3,"file":"routes.esm.js","sources":["../src/routes.ts"],"sourcesContent":["import { createRouteRef } from '@backstage/frontend-plugin-api';\n\nexport const rootRouteRef = createRouteRef();\n"],"names":[],"mappings":";;AAEO,MAAM,eAAe,cAAA;;;;"}

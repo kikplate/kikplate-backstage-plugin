@@ -52,7 +52,7 @@ describe('PlateList', () => {
     );
 
     const card = await screen.findByText('FastAPI Starter');
-    await user.click(card.closest('div'));
+    await user.click(card.closest('div')!);
 
     expect(onSelectPlate).toHaveBeenCalledWith(plates[0]);
   });

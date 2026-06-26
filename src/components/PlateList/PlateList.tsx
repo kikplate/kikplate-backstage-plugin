@@ -6,8 +6,8 @@ export type PlateItem = {
   slug: string;
   owner?: string;
   description?: string;
-  tags: string[];
-  badges: string[];
+  tags?: string[];
+  badges?: string[];
   updatedAt?: string;
   gitUrl?: string;
   repositoryUrl?: string;
@@ -26,7 +26,7 @@ export const PlateList = ({
 }: PlateListProps) => {
   const theme = useTheme();
   const hoverShadowColor =
-    theme.palette.mode === 'dark'
+    theme.palette.type === 'dark'
       ? 'rgba(0, 0, 0, 0.35)'
       : 'rgba(0, 0, 0, 0.12)';
 
@@ -122,11 +122,11 @@ export const PlateList = ({
               <strong>Owner:</strong> {plate.owner}
             </p>
           )}
-          {(plate.tags.length > 0 || plate.badges.length > 0) && (
+          {((plate.tags?.length ?? 0) > 0 || (plate.badges?.length ?? 0) > 0) && (
             <div style={{ marginTop: '8px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              {plate.tags.length > 0 && (
+              {(plate.tags?.length ?? 0) > 0 && (
                 <div style={{ margin: 0, display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
-                  {plate.tags.map(tag => (
+                  {plate.tags?.map(tag => (
                     <span
                       key={`tag-${tag}`}
                       style={{
@@ -142,9 +142,9 @@ export const PlateList = ({
                   ))}
                 </div>
               )}
-              {plate.badges.length > 0 && (
+              {(plate.badges?.length ?? 0) > 0 && (
                 <div style={{ margin: 0, display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
-                  {plate.badges.map(badge => (
+                  {plate.badges?.map(badge => (
                     <span
                       key={`badge-${badge}`}
                       style={{

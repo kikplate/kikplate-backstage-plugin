@@ -1,5 +1,5 @@
 {
-  "name": "@internal/backstage-plugin-kikplate",
+  "name": "@corpobit/backstage-plugin-kikplate",
   "version": "0.1.0",
   "license": "UNLICENSED",
   "main": "src/index.ts",
@@ -11,7 +11,10 @@
   },
   "backstage": {
     "role": "frontend-plugin",
-    "pluginId": "kikplate"
+    "pluginId": "kikplate",
+    "pluginPackages": [
+      "@corpobit/backstage-plugin-kikplate"
+    ]
   },
   "sideEffects": false,
   "scripts": {
